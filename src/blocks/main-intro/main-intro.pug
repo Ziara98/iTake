@@ -1,0 +1,13 @@
+.main-intro__inner
+    include ../../blocks/nav/nav.pug
+    .main-intro__block  
+        .main-intro--logo
+            a(href="index.html")
+                svg(class="features__icon" width="105px" height="20px")
+                    use(xlink:href="img/icons/sprite.svg#main-logo")
+        h3.main-intro--title  Your Favorite Pill Schedule App That Really Cares About Your Health
+        p.main-intro--text iTake is a free app with no ads, which reminds you to take your pills
+        a(href="https://www.apple.com/ru/ios/app-store/")
+            img(src='img/appStore.png' class="main-intro--img")
+    .main-intro__photo
+        img(src="img/phone.png")

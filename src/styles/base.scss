@@ -1,0 +1,153 @@
+@import 'mixins';
+@import 'variables';
+@import 'functions';
+@import 'smart-grid';
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', 'Tahoma', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  text-rendering: optimizelegibility;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  overflow-x: hidden !important;
+}
+
+
+.container-fluid {
+  @include container-full();
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container {
+  @include container();
+  max-width: rem-calc(1110);
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+
+
+  @include sm-block() {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include md-block() {
+    padding-left: rem-calc(0);
+    padding-right: rem-calc(0);
+  }
+
+  @include lg-block() {
+    padding: rem-calc(0) rem-calc(40);
+  }
+
+}
+
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/*for animation*/
+.animated {
+  animation-timing-function: ease;
+  animation-duration: 600ms;
+  animation-play-state: paused;
+}
+
+.animation-run {
+  animation-play-state: running;
+}
+
+.animated[class*='animation-delay-'] {
+  animation-fill-mode: backwards;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}

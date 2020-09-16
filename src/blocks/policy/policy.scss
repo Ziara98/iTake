@@ -1,0 +1,43 @@
+.policy__item {
+    background: #fff;
+    width: 100%;
+    max-width: rem-calc(260);
+    margin: rem-calc(72) auto rem-calc(70);
+    @include Montserrat-Regular;
+
+
+    @include sm-block {
+        max-width: rem-calc(400);
+    }
+
+    @include md-block() {
+        max-width: rem-calc(608);
+        margin-bottom: rem-calc(122);
+    }
+
+    @include lg-block() {
+        max-width: rem-calc(1020);
+    }
+}
+
+.policy__text {
+    font-size: rem-calc(17);
+    line-height: rem-calc(21);
+    margin-bottom: rem-calc(20);
+}
+
+
+.policy__title {
+    font-size: rem-calc(20);
+    line-height: rem-calc(24);
+    color: #000000;
+}
+
+
+.policy__text__inner {
+    display: none;
+
+    @include lg-block() {
+        display: block;
+    }
+}

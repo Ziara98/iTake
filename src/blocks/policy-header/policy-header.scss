@@ -1,0 +1,30 @@
+.policy-header {
+    background: url(../img/intro.jpg)center no-repeat;
+    background-size: cover;
+    padding: rem-calc(34) rem-calc(40) rem-calc(38);
+    @include Montserrat-Bold;
+}
+
+.policy__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include sm-block() {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+
+.policy__main-title {
+    font-size: rem-calc(28);
+    line-height: 107%;
+    color: #1E6BC6;
+    margin-top: rem-calc(60);
+    text-align: center;
+
+    @include md-block() {
+        text-align: left;
+        font-size: rem-calc(35);
+    }
+}
